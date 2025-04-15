@@ -8,4 +8,4 @@ jobs: #Les regroupement d'étapes a appliquer lors du WF
   hello-world: 
     runs-on: ubuntu-latest 
     steps:  
-      - run: "hiii"
+      - run: echo "hiii"
