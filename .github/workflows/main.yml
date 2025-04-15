@@ -9,3 +9,11 @@ jobs: #Les regroupement d'étapes a appliquer lors du WF
     runs-on: ubuntu-latest 
     steps:  
       - run: echo "hiii"
+  build: 
+    runs-on: ubuntu-latest
+    steps:
+    - run: ls
+    #{organisaitons}/{repertoire}@{version}
+    - uses: actions/checkout@v4.2.2
+    - run: ls
+    
