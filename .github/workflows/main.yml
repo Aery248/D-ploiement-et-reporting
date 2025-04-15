@@ -5,3 +5,7 @@ jobs: #Les regroupement d'étapes a appliquer lors du WF
     runs-on: ubuntu-latest #L'environnement sur lequel lancer le WF
     steps: #Listes des étapes du job
       - run: echo "Hello, World!" #1 étape du job
+  hello-world: 
+    runs-on: ubuntu-latest 
+    steps:  
+      - run: "hiii"
