@@ -1,0 +1,7 @@
+name: Mon SUPER workFLOW #Nom du workflow (affiche dans la console)
+on: [push] # Evenement a partir duquel le WF est lancé
+jobs: #Les regroupement d'étapes a appliquer lors du WF
+  say-hello: #Le nom du job
+    runs-on: ubuntu-latest #L'environnement sur lequel lancer le WF
+    steps: #Listes des étapes du job
+      - run: echo "Hello, World!" #1 étape du job
