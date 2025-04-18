@@ -1,3 +1,4 @@
+
 name: Mon SUPER workFLOW #Nom du workflow (affiche dans la console)
 on: [push] # Evenement a partir duquel le WF est lancé
 jobs: #Les regroupement d'étapes a appliquer lors du WF
@@ -12,8 +13,26 @@ jobs: #Les regroupement d'étapes a appliquer lors du WF
   build: 
     runs-on: ubuntu-latest
     steps:
-    - run: ls
     #{organisaitons}/{repertoire}@{version}
-    - uses: actions/checkout@v4.2.2
-    - run: ls
-    
+      - uses: actions/checkout@v4.2.2
+      - run: ls
+      - run: echo "Ce workflow a été trigger sur un événement de type ${{ github.event_name }}"
+      - run: echo "L'utilisateur qui a déclanché l'action est ${{ github.actor }}"
+      - run: echo "L'SHA du commit déclancheur est ${{ github.sha }}"
+      - run: echo " Le nom de ce workflow est ${{ github.workflow }}"
+      - run: echo " L'architecture CPU de ce runner est ${{ runner.arch }} "
+      - run: echo "Le répertoire personnel de ce runner est ${{ env.HOME }}" 
+  android-app-build: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v4
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: 17
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+      - name: Build with Gradle
+        run: ./gradlew build
