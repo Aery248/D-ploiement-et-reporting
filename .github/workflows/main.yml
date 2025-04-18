@@ -16,4 +16,9 @@ jobs: #Les regroupement d'étapes a appliquer lors du WF
     - uses: actions/checkout@v4.2.2
     - run: ls
     - run: echo "Ce workflow a été trigger sur un événement de type ${{ github.event_name }}
+    - run: echo "L'utilisateur qui a déclanché l'action est ${{ github.actor }}"
+    - run: echo "L'SHA du commit déclancheur est ${{ github.sha }}"
+    - run: echo " Le nom de ce workflow est ${{ github.workflow }}"
+    - run: echo " L'architecture CPU de ce runner est ${{ runner.arch }} "
+    - run: echo "Le répertoire personnel de ce runner est ${{ env.HOME }}" 
     
