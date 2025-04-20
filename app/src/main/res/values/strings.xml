@@ -1,4 +1,17 @@
 <resources>
     <string name="app_name">Meteo</string>
     <string name="text_view_static_app">HELLO 2</string>
+    <string name="date">Lundi 28 Avril</string>
+    <string name="City">Paris</string>
+    <string name="Weather">Ensoleillé</string>
+    <string name="température">28°C</string>
+    <string name="détails">couché du soleil vers 22h12</string>
+    <string name="vitesse">4 km/h</string>
+    <string name="temps">Vent</string>
+    <string name="pourcentage">15%</string>
+    <string name="humidite">Humidité</string>
+    <string name="km">8 km</string>
+    <string name="visibilite">Visibilité</string>
+    <string name="semaine">prévision de la semaine</string>
+    <string name="dates">29 Avril</string>
 </resources>
